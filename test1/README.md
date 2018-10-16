@@ -25,7 +25,7 @@ GROUP BY department_name
 HAVING d.department_name in ('IT'，'Sales');
 ```
 ## 分析
-该代码的执行计划为通过创建索引来实现查询。
+该代码的执行计划为通过创建索引来实现查询，执行sql优化计划也没有给出优化建议。
 ## 运行截图
 ![结果](./select2result.png)
 ![脚本](./select2jiaoben.png)
