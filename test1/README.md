@@ -9,7 +9,7 @@ and d.department_name in ('IT'，'Sales')
 GROUP BY department_name;
 ```
 ## 分析
-
+该代码的执行计划为直接执行查询功能。我认为该查询语句是最优查询语句，但是通过sql语句优化指导，给出了一些优化建议，通过创建一个或多个索引可以改进该语句的执行计划。
 ## 运行截图
 ![结果](./select1result.png)
 ![脚本](./select1jiaoben.png)
@@ -25,7 +25,7 @@ GROUP BY department_name
 HAVING d.department_name in ('IT'，'Sales');
 ```
 ## 分析
-
+该代码的执行计划为通过创建索引来实现查询。
 ## 运行截图
 ![结果](./select2result.png)
 ![脚本](./select2jiaoben.png)
