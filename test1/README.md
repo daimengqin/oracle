@@ -14,6 +14,7 @@ GROUP BY department_name;
 ![结果](./select1result.png)
 ![脚本](./select1jiaoben.png)
 ![sql优化指导](./select1sqloptimize.png)
+![](./cx1.png)
 # 查询2
 ## 代码
 ``` sql
@@ -30,6 +31,7 @@ HAVING d.department_name in ('IT'，'Sales');
 ![结果](./select2result.png)
 ![脚本](./select2jiaoben.png)
 ![sql优化指导](./select2sqloptimize.png)
+![](./cx2.png)
 # 我的查询
 ## 代码
 ``` sql
@@ -42,3 +44,4 @@ where d.department_id =  e.department_id and d.department_name between 'IT' and 
 ![结果](./myselectresult.png)
 ![脚本](./myselectjiaoben.png)
 ![sql优化指导](./myselectsqloptimize.png)
+![](./myc.png)
