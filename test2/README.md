@@ -67,5 +67,10 @@
 ![](./4.1.png)
 ![](./4.2.png)
 ![](./4.3.png)
+## 图形界面操作：
+### SQL-DEVELOPER修改用户的操作界面： 
+![](./photo1.png)
+### sqldeveloper授权对象的操作界面： 
+![](./photo2.png)
 
 
