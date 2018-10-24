@@ -22,7 +22,7 @@
 ## 第二步：新用户new_user连接到pdborcl，创建表mytable和视图myview，插入数据，最后将myview的SELECT对象权限授予hr用户。
 ## 代码：
 ``` 
-•	$ sqlplus new_user/123@pdborcl
+•$ sqlplus new_user/123@pdborcl
 •SQL> show user;
 •USER is "NEW_USER"
 •SQL> CREATE TABLE mytable (id number,name varchar(50));
@@ -48,4 +48,24 @@
 ```
 ## 截图:
 ![](./3.1.png)
+## 查看数据库的使用情况
+## 以下样例查看表空间的数据库文件，以及每个文件的磁盘占用情况。
+## 代码：
+``` 
+•$ sqlplus system/123@pdborcl
+•SQL>SELECT tablespace_name,FILE_NAME,BYTES/1024/1024 MB,MAXBYTES/1024/1024 MAX_MB,autoextensible FROM dba_data_files  WHERE  •tablespace_name='USERS';
+•SQL>SELECT a.tablespace_name "表空间名",Total/1024/1024 "大小MB",
+•free/1024/1024 "剩余MB",( total - free )/1024/1024 "使用MB",
+•Round(( total - free )/ total,4)* 100 "使用率%"
+•from (SELECT tablespace_name,Sum(bytes)free
+•FROM   dba_free_space group  BY tablespace_name)a,
+•(SELECT tablespace_name,Sum(bytes)total FROM dba_data_files
+• group  BY tablespace_name)b
+•where  a.tablespace_name = b.tablespace_name;
+```
+## 截图:
+![](./4.1.png)
+![](./4.2.png)
+![](./4.3.png)
+
 
