@@ -39,7 +39,7 @@
 ![](./2.1.png)
 ![](./2.2.png)
 ![](./2.3.png)
-## 第三步：用户hr连接到pdborcl，查询new_user授予它的视图myview
+## 第三步：用户hr连接到pdborcl，查询new_DMQQ授予它的视图myview
 ## 代码：
 ``` 
 •$ sqlplus hr/123@pdborcl
