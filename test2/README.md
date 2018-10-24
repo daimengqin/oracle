@@ -34,8 +34,6 @@
 •SQL> CREATE VIEW myview AS SELECT name FROM mytable;
 •View created.
 •SQL> SELECT * FROM myview;
-•NAME
-
 ```
 ## 截图:
 ![](./2.1.png)
@@ -44,23 +42,10 @@
 ## 第三步：用户hr连接到pdborcl，查询new_user授予它的视图myview
 ## 代码：
 ``` 
-•	$ sqlplus new_user/123@pdborcl
-•SQL> show user;
-•USER is "NEW_USER"
-•SQL> CREATE TABLE mytable (id number,name varchar(50));
-•Table created.
-•SQL> INSERT INTO mytable(id,name)VALUES(1,'zhang');
-•1 row created.
-•SQL> INSERT INTO mytable(id,name)VALUES (2,'wang');
-•1 row created.
-•SQL> CREATE VIEW myview AS SELECT name FROM mytable;
-•View created.
-•SQL> SELECT * FROM myview;
-•NAME
-
+•$ sqlplus hr/123@pdborcl
+•SQL> SELECT * FROM new_user.myview;
+•SQL> exit
 ```
 ## 截图:
 ![](./3.1.png)
-![](./3.2.png)
-![](./3.3.png)
 
