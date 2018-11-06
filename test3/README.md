@@ -43,7 +43,8 @@ TABLESPACE USERS02
 );
 ```
 ## 截图：
-
+![](./orders1.png)
+![](./orders2.png)
 ## （2）创建order_details表
 ## 代码：
 ```
