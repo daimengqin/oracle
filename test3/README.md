@@ -79,7 +79,7 @@ NOCOMPRESS NO INMEMORY
 ```
 ## 截图：
 
-## 查看表空间的使用情况
+## （3）查看表空间的使用情况
 ## 代码：
 ```
 SQL>SELECT tablespace_name,FILE_NAME,BYTES/1024/1024 MB,MAXBYTES/1024/1024 MAX_MB,autoextensible FROM dba_data_files  WHERE  tablespace_name='USERS';
