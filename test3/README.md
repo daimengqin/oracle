@@ -1,6 +1,6 @@
 # 实验3：创建分区表
 ## 步骤
-## （1）创建orders表
+## （1）登录自己用户new_DMQQ，创建orders表
 ## 代码：
 ```
 CREATE TABLE "NEW_DMQQ"."ORDERS" 
